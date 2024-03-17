@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.header1__title{
+    color: #A435F0;
+}
+
+.header2{
+    border: white solid 2px;
+    border-radius: 30px;
+    width: 60%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+.header2 input{
+    font-size: 18px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+}
+
+.header2 input:focus{
+    outline: transparent;
+}
+
+.header3{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header3 p{
+    color: #A435F0;
+    font-size: 18px;
+}
+
+.header4{
+    display: none;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: black;
+}
+
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+
+.notification{
+    border: black solid 1px;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    display: none;
+}
+
+.mylearning:hover .notification{
+    display: block;
+}
+
+.header3 .mylearning__notification{
+    color: black;
+}
+
+.categories p{
+    background-color: #A435F0;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.categories p:hover{
+    background-color: white;
+    color: #A435F0;
+    transition: 1s;
+}
+
+.banner img{
+    height: 60vh;
+    width: 80vw;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.banner{
+    display: flex;
+    justify-content: center ;
+    background-color: #94C2E5;
+    padding: 50px;
+    gap: 20px;
+    align-items: center;
+}
+
+.sale-offer{
+    border: black solid 2px;
+    padding: 20px;
+    height: fit-content;
+    margin: 10px;
+    animation-name: sale;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sale {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.sale-offer h2{
+    margin-bottom: 10px;
+}
+
+.recommend{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.course-container{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-card{
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.course-card img{
+    width: 100%;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.topic-container{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.topics{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.topics p{
+    border: gray solid 2px;
+    padding: 20px;
+    flex-basis: 25%;
+    flex-grow: 1;
+}
+
+.popular-container{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.popular-topic{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.footer-container{
+    padding: 30px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.footer-s1{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-s1__one p{
+    margin: 20px;
+}
+
+.footer-s1__two p{
+    margin: 20px;
+}
+
+.footer-s2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.footer-s2__udemy{
+    color: #A435F0;
+}
+
+.footer-s2__copyright{
+    color: #A435F0;
+}
+
+@media screen and (max-width:800px) {
+     body{
+        font-size: 10px;
+     }
+
+     .sales-container{
+        display: none;
+     }
+
+     .header3{
+        display: none;
+     }
+
+     .header4{
+        display: block;
+        font-size: 16px;
+     }
+
+     .banner img{
+        height: 40vh;
+     }
+
+     .header2 input{
+        font-size: 14px;
+     }
+}
+
+@media screen and (max-width:600px) {
+    .categories{
+        display: none;
+    }
+
+    .course-card{
+        flex-basis: 40%;
+    }    
+
+    .banner img{
+        height: 30vh;
+    }
+}
